@@ -1,4 +1,5 @@
 
+import 'phaser';
 export class MainScene extends Phaser.Scene {
 
   private phaserSprite: Phaser.GameObjects.Sprite;
@@ -10,7 +11,7 @@ export class MainScene extends Phaser.Scene {
     }
 
   public preload(): void {
-      this.load.image('logo', '../../assets/phaser.png');
+      this.load.image('logo', require('../../assets/phaser.png'));
     }
 
   public create(): void {

@@ -13,11 +13,7 @@ module.exports = {
     devtool: "source-map",
     mode: "development",
     context: sourcePath,
-    entry: {
-        app: [
-            "./app.ts"
-        ]
-    },
+    entry: "./app.ts",
     output: {
         path: outPath,
         filename: "js/[name].bundle.js",
@@ -26,14 +22,14 @@ module.exports = {
     },
     target: "web", 
     devServer: {
-        contentBase: path.resolve(__dirname, sourcePath),
+        contentBase: path.resolve(__dirname, outPath),
         publicPath: outPath,
-        host: '127.0.0.1',
+        host: 'localhost',
         port: 6006,
         open: false
       },
     resolve: {
-        extensions: [".js", ".ts", ".tsx"],
+        extensions: [".js", ".ts", ],
         alias: {
             phaser: phaser
           }
@@ -41,7 +37,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(ts|tsx)$/,
+                test: /\.(ts)$/,
                 loader: "ts-loader",
                 exclude: '/node_modules/'
             },
@@ -80,14 +76,29 @@ module.exports = {
                 ]               
             }
         ]
-    },
-    plugins: [
-        new WebpackCleanupPlugin(),
-        new HtmlWebpackPlugin({ 
-            template: "index.html" 
-        }),
-        new webpack.DefinePlugin({
-            "APP_VERSION": JSON.stringify(pkg.version)
-        })
-    ]
+    },plugins:[
+    ],
+    optimization: {
+        splitChunks: {
+          chunks: 'async',
+          minSize: 30000,
+          maxSize: 0,
+          minChunks: 1,
+          maxAsyncRequests: 5,
+          maxInitialRequests: 3,
+          automaticNameDelimiter: '~',
+          name: true,
+          cacheGroups: {
+            vendors: {
+              test: /[\\/]node_modules[\\/]/,
+              priority: -10
+            },
+            default: {
+              minChunks: 2,
+              priority: -20,
+              reuseExistingChunk: true
+            }
+          }
+        }
+      }
 }
