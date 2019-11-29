@@ -1,5 +1,6 @@
 
 import 'phaser';
+import * as space1 from '../../assets/images/Space1.png';
 export class MainScene extends Phaser.Scene {
 
   private phaserSprite: Phaser.GameObjects.Sprite;
@@ -11,11 +12,12 @@ export class MainScene extends Phaser.Scene {
     }
 
   public preload(): void {
-      this.load.image('logo', require('../../assets/phaser.png'));
+      this.load.image('background', space1);
+      console.log(this.plugins);
     }
 
   public create(): void {
-      this.phaserSprite = this.add.sprite(400, 300, 'logo');
+      this.phaserSprite = this.add.sprite(400, 300, 'background');
       console.log(this.phaserSprite);
     }
   }

@@ -2,6 +2,7 @@
     "compilerOptions": {
       "sourceMap": true,
       "target": "es2017",
+      "typeRoots": ["@types"],
       "jsx": "react",
       "module": "amd",
       "moduleResolution": "node",
