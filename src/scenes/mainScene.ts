@@ -1,6 +1,6 @@
 
 import 'phaser';
-import * as cat from '../../assets/sprites/cat.png';
+import * as cat from '../../assets/sprites/pixelatedCat.png';
 import * as red from '../../assets/sprites/red.png';
 import * as space1 from '../../assets/sprites/Space1.png';
 export class MainScene extends Phaser.Scene {
