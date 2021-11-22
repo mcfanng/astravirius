@@ -1,25 +1,39 @@
 {
-    "compilerOptions": {
-      "sourceMap": true,
-      "target": "es2017",
-      "typeRoots": ["@types"],
-      "jsx": "react",
-      "module": "amd",
-      "moduleResolution": "node",
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "declaration": false,
-      "noImplicitAny": false,
-      "noImplicitReturns": false,
-      "noUnusedLocals": true,
-      "removeComments": true,
-      "strictNullChecks": false,
-      "outDir": "build",
-      "lib": ["es6", "es7", "dom"],
-      "baseUrl": "src",
-      "paths": {
-        "app/*": ["./app/*"]
-      }
-    },
-    "exclude": ["dist", "build", "node_modules"]
-  }
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es2021",
+    "typeRoots": [
+      "@types"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "strict": true,
+    "module": "amd",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "strictNullChecks": false,
+    "outDir": "build",
+    "lib": [
+      "es6",
+      "es7",
+      "dom"
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "app/*": [
+        "./app/*"
+      ]
+    }
+  },
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules"
+  ]
+}

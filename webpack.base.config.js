@@ -13,7 +13,7 @@ module.exports = {
     devtool: "source-map",
     mode: "development",
     context: sourcePath,
-    entry: "./app.ts",
+    entry: "./app.ts", 
     output: {
         path: outPath,
         filename: "js/[name].bundle.js",
@@ -41,40 +41,7 @@ module.exports = {
                 loader: "ts-loader",
                 exclude: '/node_modules/'
             },
-            { test: /phaser\.js$/, loader: 'expose-loader?Phaser' },
-            { 
-                enforce: "pre", 
-                test: /\.js$/, 
-                loader: "source-map-loader" 
-            },
-            {
-                test: /\.css$/,
-                loader: ["style-loader", "css-loader"]
-            },
-            {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            outputPath: "images/"
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            outputPath: "fonts/"
-                        }
-                    }
-                ]               
-            }
+         
         ]
     },plugins:[
     ],
