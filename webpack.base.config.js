@@ -13,7 +13,7 @@ module.exports = {
     devtool: "source-map",
     mode: "development",
     context: sourcePath,
-    entry: "./app.ts",
+    entry: "./app.ts", 
     output: {
         path: outPath,
         filename: "js/[name].bundle.js",
@@ -40,8 +40,7 @@ module.exports = {
                 test: /\.(ts)$/,
                 loader: "ts-loader",
                 exclude: '/node_modules/'
-            },
-            { test: /phaser\.js$/, loader: 'expose-loader?Phaser' },
+            }, { test: /phaser\.js$/, loader: 'expose-loader?Phaser' },
             { 
                 enforce: "pre", 
                 test: /\.js$/, 
@@ -75,6 +74,7 @@ module.exports = {
                     }
                 ]               
             }
+         
         ]
     },plugins:[
     ],
