@@ -32,7 +32,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "npm": "^6.13.1",
     "phaser": "^3.21.0"
   },
   "scripts": {
