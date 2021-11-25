@@ -30,9 +30,7 @@ module.exports = {
       },
     resolve: {
         extensions: [".js", ".ts", ],
-        alias: {
-            phaser: phaser
-          }
+        
     },
     module: {
         rules: [
@@ -40,7 +38,12 @@ module.exports = {
                 test: /\.(ts)$/,
                 loader: "ts-loader",
                 exclude: '/node_modules/'
-            }, { test: /phaser\.js$/, loader: 'expose-loader?Phaser' },
+            }, 
+            {
+                test: require.resolve('Phaser'),
+                loader: 'expose-loader',
+                options: { exposes: { globalName: 'Phaser', override: true } }
+              },
             { 
                 enforce: "pre", 
                 test: /\.js$/, 
