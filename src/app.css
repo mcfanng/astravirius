@@ -1,15 +1,20 @@
+@font-face {
+    font-family: minim;
+    src: url(./fonts/minim.otf);
+  }
 body{
     background: rgb(74,33,101);
     background: linear-gradient(90deg, rgba(74,33,101,1) 0%, rgba(253,77,29,1) 25%, rgba(69,98,252,1) 41%);
     min-width: 776px;
     margin: 0;
     padding: 0;
-    font-family: monospace;
+    font-family: minim, sans-serif;
 }
  #site-header {
     
     width: 100%;
     background-color: #ccc;
+    padding:20px
 } 
 #site-header h1 {
     margin: 0;
@@ -18,4 +23,9 @@ body{
     margin: 0;
     width: 100%;
     background-color: #ccc;
+}
+#currentGame{
+    width: 800px; /*base width of game*/
+    margin: 20px auto;
+    cursor: none;
 }

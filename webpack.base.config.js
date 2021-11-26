@@ -13,7 +13,9 @@ module.exports = {
     devtool: "source-map",
     mode: "development",
     context: sourcePath,
-    entry: "./app.ts", 
+    entry: {
+        app:"./app.ts"
+    }, 
     output: {
         path: outPath,
         filename: "js/[name].bundle.js",
@@ -66,7 +68,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|otf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [
                     {
                         loader: "file-loader",
@@ -79,7 +81,7 @@ module.exports = {
             }
          
         ]
-    },plugins:[
+    },plugins:[ new HtmlWebpackPlugin({template:'index.html'})
     ],
     optimization: {
         splitChunks: {
