@@ -25,7 +25,7 @@ module.exports = {
     target: "web", 
     devServer: {
         contentBase: path.resolve(__dirname, outPath),
-        publicPath: outPath,
+        publicPath: '/',
         host: 'localhost',
         port: 6006,
         open: false
@@ -78,10 +78,9 @@ module.exports = {
                         }
                     }
                 ]               
-            }
-         
+            },
         ]
-    },plugins:[ new HtmlWebpackPlugin({template:'index.html'})
+    },plugins:[ new HtmlWebpackPlugin({template: 'index.html'})
     ],
     optimization: {
         splitChunks: {

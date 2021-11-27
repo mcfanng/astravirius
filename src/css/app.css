@@ -1,6 +1,6 @@
 @font-face {
     font-family: minim;
-    src: url(./fonts/minim.otf);
+    src: url(../fonts/minim.otf);
   }
 body{
     background: rgb(74,33,101);
