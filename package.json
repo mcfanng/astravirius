@@ -38,7 +38,7 @@
   "scripts": {
     "build": "webpack --config webpack.base.config.js",
     "lint": "tslint -p tsconfig.json",
-    "start": " webpack-dev-server --config webpack.base.config.js --mode development --hot --progress --colors",
+    "start": "webpack-dev-server --config webpack.base.config.js --mode development --hot --progress --colors",
     "version": ""
   }
 }

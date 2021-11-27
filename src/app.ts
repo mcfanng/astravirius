@@ -1,4 +1,5 @@
 import 'phaser';
+import './fonts/minim.otf';
 import './css/bootstrap.min.css';
 import './css/app.css';
 import * as bootstrap from 'bootstrap';

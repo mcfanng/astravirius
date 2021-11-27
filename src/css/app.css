@@ -3,18 +3,21 @@
     src: url(../fonts/minim.otf);
   }
 body{
-    background: rgb(74,33,101);
-    background: linear-gradient(90deg, rgba(74,33,101,1) 0%, rgba(253,77,29,1) 25%, rgba(69,98,252,1) 41%);
-    min-width: 776px;
+    background-image: rgb(74,33,101);
+    background-image: linear-gradient(142deg, rgba(74,33,101,1) 0%, rgba(253,77,29,1) 25%, rgba(69,98,252,1) 41%);
+    background-attachment: fixed;
+    min-width: var(--base-width); 
     margin: 0;
     padding: 0;
     font-family: minim, sans-serif;
+    --base-width: 800px /*base width of game*/
 }
  #site-header {
     
     width: 100%;
-    background-color: #ccc;
-    padding:20px
+    background-color: #fff;
+    padding:20px;
+    box-shadow: #999 0px 2px 5px ;
 } 
 #site-header h1 {
     margin: 0;
@@ -24,8 +27,21 @@ body{
     width: 100%;
     background-color: #ccc;
 }
+#header-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 #currentGame{
-    width: 800px; /*base width of game*/
+    width: var(--base-width); 
     margin: 20px auto;
     cursor: none;
+}
+#navMenu ul {
+    
+    display:flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-bottom: 0;
+    
 }
