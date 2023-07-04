@@ -1,13 +1,13 @@
 import 'phaser';
-import './app.css';
-import * as bootstrap from 'bootstrap';
+//import './app.css';
+//import * as bootstrap from 'bootstrap';
 import { GameConfig as MainGameConfig } from './gameConfig/mainGameConfig';
 
 class SimpleGame extends Phaser.Game {
 
-    constructor(config) {
+    constructor(config: Phaser.Types.Core.GameConfig) {
         super(config);
-        bootstrap;
+       // bootstrap;
     }
 }
 
